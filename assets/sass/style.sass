@@ -1,0 +1,234 @@
+@import "lib/vars"
+@import "lib/reboot"
+@import "lib/type"
+@import "lib/utils"
+
+@-webkit-keyframes bg-scrolling-reverse
+    100% 
+    background-position: 50px 50px
+
+@-moz-keyframes bg-scrolling-reverse
+    100% 
+    background-position: 50px 50px
+
+@-o-keyframes bg-scrolling-reverse
+    100% 
+    background-position: 50px 50px
+
+@keyframes bg-scrolling-reverse
+    100%
+        background-position: 50px 50px
+
+@-webkit-keyframes bg-scrolling
+    0% 
+    background-position: 50px 50px
+
+@-moz-keyframes bg-scrolling
+    0% 
+    background-position: 50px 50px
+
+@-o-keyframes bg-scrolling
+    0% 
+    background-position: 50px 50px
+
+@keyframes bg-scrolling
+    0%
+        background-position: 50px 50px
+
+body
+    color: #5900ff
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0
+    -webkit-animation: bg-scrolling-reverse .92s infinite
+    -moz-animation: bg-scrolling-reverse .92s infinite
+    -o-animation: bg-scrolling-reverse .92s infinite
+    animation: bg-scrolling-reverse .92s infinite
+    -webkit-animation-timing-function: linear
+    -moz-animation-timing-function: linear
+    -o-animation-timing-function: linear
+    animation-timing-function: linear
+
+.draggable
+    min-height: 6em
+    margin: 3rem 1rem 1rem 1rem
+    color: white
+    padding: 1%
+    touch-action: none
+    user-select: none
+    position: relative // Añadido position:relative
+    z-index: 100
+
+.title
+    z-index: 100
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    img
+        max-width: 1000px
+.start
+    z-index: 50
+    margin-left: 47%
+    margin-top: 20px
+    background: linear-gradient(90deg, #490ea7 35%, #ffae17 100%)
+    border: 2px solid #ffffff
+    border-radius: 30px
+    color: #ffffff
+    cursor: pointer
+    display: inline-block
+    font-weight: 600
+    font-size: 18px
+    padding: 0 18px
+    line-height: 50px
+    text-align: center
+    text-decoration: none
+    user-select: none
+    -webkit-user-select: none
+    touch-action: manipulation
+    &:hover
+        background-color: #ffffff
+
+.by
+    margin-left: 47%
+    margin-bottom: 30px
+    position: fixed
+    z-index: 0
+
+.logo
+    margin-right: 20px
+    padding: 10px
+    width: 250px
+    height: auto
+
+.navContainer
+    width: 100%
+    //padding: 15px
+    display: flex
+    justify-content: space-between
+.frame
+    position: relative
+    max-width: 300px
+.navImg
+    width: 100%
+    height: auto
+
+.main1
+    position: relative
+
+.homeImg
+    width: 700px
+    max-width: 100%
+    height: auto
+    display: block
+    margin: 0 auto
+
+.btn
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: linear-gradient(90deg, #ffc2fcdc 35%, #a292df 100%)
+    border: 2px solid #ffffff
+    border-radius: 82px
+    color: #ffffff
+    cursor: pointer
+    display: inline-block
+    font-weight: 700
+    font-size: 80px
+    padding: 0 28px
+    line-height: 90px
+    text-align: center
+    text-decoration: none
+    user-select: none
+    -webkit-user-select: none
+    touch-action: manipulation
+    &:hover
+        background-color: #ffffff
+        color: #e6ffda
+
+.rules
+    margin: 50px
+    width: 150px
+    background-color: #ffffff
+    box-shadow: #ff7c01 4px 4px 0 0
+    p
+        padding: 5px
+.back
+    width: 100px
+    margin: 50px
+    padding: 10px
+    border-radius: 20px
+.rueda
+    width: 800px
+    height: 800px
+    position: absolute
+    left: 30%
+    top: 5%
+
+    .animacion
+        width: 800px
+        height: 800px
+        position: absolute
+        z-index: 1
+    .pentagono
+        width: 800px
+        height: 800px
+        position: absolute
+        z-index: -1
+
+html, body
+    padding: 0
+    margin: 0
+
+div#game
+    width: 100%
+    height: 100%
+
+//carousell
+
+.carusell
+    margin-top: 5px
+    margin-bottom: 110px
+
+#caja
+    height: 660px
+    width: auto
+    display: block
+    margin: 0px auto
+    margin-top: 5px
+
+.mini
+    width: 2px
+    height: 2px
+    margin: 5px
+    border-block-color: $negro
+
+.caja_mini
+    display: flex
+    justify-content: center
+    margin: 20px
+    margin-left: 45px
+    margin-right: 45px
+.controler
+    display: flex
+    justify-content: center
+    align-items: center
+
+.mini_style
+    background-color: #490ea7
+    border-radius: 50%
+
+#derecha
+    background: none
+    border: none
+    img
+        width: 50px
+        height: auto
+
+#izquierda
+    background: none
+    border: none
+    img
+        width: 50px
+        height: auto
+
+
